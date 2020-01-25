@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.btn{
+    display: block;
+    margin: 30px auto;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: darkgrey;
+    color: floralwhite;
+    font-weight: 700;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 300px;
+    text-align: center;
+}
+
+.name p{
+    text-decoration: underline;
+}

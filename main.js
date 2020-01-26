@@ -22,33 +22,18 @@ var people = function () {
        showValue.innerHTML = '';
        showDate.innerHTML = '';
 
-      for (let name of xhttp.response) {
+     for (var property in xhttp.response) {
 
-        showName.innerHTML += `<p>${name.txt}</p>`;
+      showName.innerHTML += `<p>${xhttp.response[property].txt}</p>`;
+      showValue.innerHTML += `<p>${xhttp.response[property].cc}</p>`;
+      showCost.innerHTML += `<p>${xhttp.response[property].rate}</p>`;
+      showDate.innerHTML += `<p>${xhttp.response[property].exchangedate}</p>`;
 
-      };
-      
-      for (let value of xhttp.response) {
-
-         showValue.innerHTML += `<p>${value.cc}</p>`;
-
-      };
-
-      for (let cost of xhttp.response) {
-
-        showCost.innerHTML += `<p>${cost.rate}</p>`;
-
-      };
-
-      for (let date of xhttp.response) {
-
-        showDate.innerHTML += `<p>${date.exchangedate}</p>`;
-
-      };
-
-    };
+    }
 
   };
+  
+};
 
   xhttp.send();
 
